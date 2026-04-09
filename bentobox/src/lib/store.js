@@ -1,6 +1,7 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
+export const globalStreak = writable(0);
 export const language = writable('en');
 export const currency = writable('en');
 export const manualRates = { id: 15800, eu: 0.92, en: 1 };

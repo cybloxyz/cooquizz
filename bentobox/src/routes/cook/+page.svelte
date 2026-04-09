@@ -6,6 +6,7 @@
   import { menuData } from '$lib/data/menudata';
   import { goto } from '$app/navigation';
   import { allQuestions } from '$lib/data/quiz';
+  import { globalStreak } from '$lib/store';
 
   // Konten teks UI Statis
   const ui = {
@@ -18,7 +19,8 @@
     failedDesc: { id: "Masakanmu gosong! Gagal mendapatkan menu baru.", en: "Your food is burnt! Failed to get a new menu." },
     revealTitle: { id: "Kamu Mendapatkan", en: "You Revealed" },
     revealDesc: { id: "Resep ini sekarang tersedia di menu kamu!", en: "This recipe is now available in your menu!" },
-    btnMenu: { id: "KE MENU", en: "GO TO MENU" }
+    btnMenu: { id: "KE MENU", en: "GO TO MENU" },
+    btnCook: { id: "COBA LAGI", en: "TRY AGAIN" }
   };
 
   let currentQuestions = [];
@@ -53,11 +55,25 @@ function handleAnswer(index) {
   }
 
 function calculateResult() {
-    if (maxStreak === 5) finalStatus = "SUPER RARE";
-    else if (maxStreak === 4) finalStatus = "RARE";
-    else if (score >= 3) finalStatus = "AVERAGE"; // Skor tinggi tapi streak putus
-    else if (score >= 1) finalStatus = "COMMON";  // Benar sedikit
-    else finalStatus = "FAILED";
+    // Cek apakah di sesi (kuis) ini dia bener SEMUA (5/5)
+    if (score === 5) {
+        // Kalau bener semua, streak global bertambah
+        globalStreak.update(n => n + 1);
+    } else {
+        // Kalau ada salah satu saja dalam satu kuis, streak global PUTUS (reset ke 0)
+        globalStreak.set(0);
+    }
+
+    // Tentukan status berdasarkan STREAK GLOBAL (antar kuis)
+    if ($globalStreak >= 5) {
+        finalStatus = "SUPER RARE";
+    } else if ($globalStreak >= 3) {
+        finalStatus = "RARE";
+    } else if (score > 0) {
+        finalStatus = "AVERAGE";
+    } else {
+        finalStatus = "FAILED";
+    }
 
     // 2. Tentukan Menu yang di-reveal
     if (finalStatus === "FAILED") {
@@ -141,8 +157,12 @@ function calculateResult() {
         {/if}
 
         <button on:click={() => goto('/menu')} 
-                class="w-full py-4 bg-[#713822] text-white pgm text-2xl rounded-xl hover:bg-[#380d07] transition-all">
+                class="w-full py-4 my-4 bg-[#713822] text-white pgm text-2xl rounded-xl hover:bg-[#380d07] transition-all">
           {ui.btnMenu[$language]}
+        </button>
+        <button on:click={() => goto('/cook')} 
+                class="w-full py-4 bg-[#713822] text-white pgm text-2xl rounded-xl hover:bg-[#380d07] transition-all">
+          {ui.btnCook[$language]}
         </button>
       </div>
     </div>
