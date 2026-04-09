@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@font-face {
+  font-family: "pgm";
+  src: url("/fonts/pigame.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "bby";
+  src: url("/fonts/bbydoll.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "pix";
+  src: url("/fonts/minecraft.ttf") format("truetype");
+}
+
+h1 {
+  font-family: "pgm";
+}
+
+
+h2 {
+  font-family: "bby";
+}
+
+p {
+  font-family: "bby";
+}

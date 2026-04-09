@@ -1,0 +1,303 @@
+.navbar {
+  position: fixed;
+  top: 4%;               /* sedikit dari atas biar efek floating */
+  left: 3%;
+  right: 3%;
+  height: 120px;            /* tinggi navbar */
+  background: rgba(255, 255, 255, 0.5); /* putih semi-transparan 80% */
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0 30px;
+  border-radius: 36px;     /* rounded */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px); /* biar teks lebih jelas */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* efek floating */
+  z-index: 1000;
+  font-family: "pigame", sans-serif;
+  font-weight: bold;
+  color: #000;             /* teks hitam supaya kontras */
+}
+
+.nav-logo {
+  font-family: "pigame";
+  font-size: 36px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.imeg {
+  height: 48px;
+  width: 48px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.imeg-f {
+  height: 48px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: "pigame";
+  font-size: 36px;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  transform: scale(1.1);
+}
+
+.img {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+@media (max-width: 768px) {
+.navbar {
+  position: fixed;
+  top: 2%;               /* sedikit dari atas biar efek floating */
+  left: 2%;
+  right: 2%;
+  height: 60px;            /* tinggi navbar */
+  background: rgba(255, 255, 255, 0.8); /* putih semi-transparan 80% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 14px;     /* rounded */
+  backdrop-filter: blur(6px); /* biar teks lebih jelas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* efek floating */
+  z-index: 1000;
+  font-family: "pigame", sans-serif;
+  font-weight: bold;
+  color: #000;             /* teks hitam supaya kontras */
+}
+
+.imeg {
+  height: 12px;
+  width: 12px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.imeg-f {
+  height: 12px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.nav-logo {
+  font-family: "pigame";
+  font-size: 12px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: "pigame";
+  font-size: 10px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #b9885a;
+}
+}
+
+@media (max-width: 960px) {
+.navbar {
+  position: fixed;
+  top: 2%;               /* sedikit dari atas biar efek floating */
+  left: 6%;
+  right: 6%;
+  height: 60px;            /* tinggi navbar */
+  background: rgba(255, 255, 255, 0.8); /* putih semi-transparan 80% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 14px;     /* rounded */
+  backdrop-filter: blur(6px); /* biar teks lebih jelas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* efek floating */
+  z-index: 1000;
+  font-family: "pigame", sans-serif;
+  font-weight: bold;
+  color: #000;             /* teks hitam supaya kontras */
+}
+
+.imeg {
+  height: 24px;
+  width: 24px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.imeg-f {
+  height: 12px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.nav-logo {
+  font-family: "pigame";
+  font-size: 12px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: "pigame";
+  font-size: 10px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #b9885a;
+}
+}
+
+@media (max-width: 768px) {
+.navbar {
+  position: fixed;
+  top: 2%;               /* sedikit dari atas biar efek floating */
+  left: 5%;
+  right: 5%;
+  height: 50px;            /* tinggi navbar */
+  background: rgba(255, 255, 255, 0.8); /* putih semi-transparan 80% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 14px;     /* rounded */
+  backdrop-filter: blur(6px); /* biar teks lebih jelas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* efek floating */
+  z-index: 1000;
+  font-family: "pigame", sans-serif;
+  font-weight: bold;
+  color: #000;             /* teks hitam supaya kontras */
+}
+
+.imeg {
+  height: 12;
+  width: 12;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.imeg-f {
+  height: 12px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.nav-logo {
+  font-family: "pigame";
+  font-size: 16px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: "pigame";
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #b9885a;
+}
+}
+
+@media (max-width: 1080px) {
+.navbar {
+  position: fixed;
+  top: 2%;               /* sedikit dari atas biar efek floating */
+  left: 3%;
+  right: 3%;
+  height: 50px;            /* tinggi navbar */
+  background: rgba(255, 255, 255, 0.8); /* putih semi-transparan 80% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 14px;     /* rounded */
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px); /* biar teks lebih jelas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* efek floating */
+  z-index: 1000;
+  font-family: "pigame", sans-serif;
+  font-weight: bold;
+  color: #000;             /* teks hitam supaya kontras */
+}
+
+.imeg {
+  height: 24px;
+  width: 24[x];
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.imeg-f {
+  height: 16px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.nav-logo {
+  font-family: "pigame";
+  font-size: 16px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: "pigame";
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #b9885a;
+}
+}
+
+

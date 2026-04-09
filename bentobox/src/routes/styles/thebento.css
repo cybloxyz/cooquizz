@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "pgm";
+  src: url("/fonts/pigame.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "bby";
+  src: url("/fonts/bbydoll.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "pix";
+  src: url("/fonts/minecraft.ttf") format("truetype");
+}
+
+  .pgm {
+    font-family: 'pgm', sans-serif;
+  }
+  
+
+.flat {
+    min-height: 100vh;
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    display: flex;
+}
+
+.middle {
+    display: flex;
+    font-family: "spacebit";
+    font-weight: bolder;
+    font-size:xx-large;
+    color: white;
+    margin:auto;
+}
+
+.butt {
+    font-family: "spacebit";
+    font-weight: bolder;
+    font-size: large;
+    color: white;
+    background-color: #b9885a;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
