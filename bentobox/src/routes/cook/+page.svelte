@@ -38,6 +38,28 @@
     currentQuestions = [...allQuestions].sort(() => 0.5 - Math.random()).slice(0, 5);
   });
 
+function resetGame() {
+    // Reset semua state ke awal
+    step = 0;
+    currentQIndex = 0;
+    score = 0;
+    streak = 0;
+    maxStreak = 0;
+    showPopup = false;
+    finalStatus = "";
+    revealedMeal = null;
+    
+    // Ambil soal baru lagi dari quiz.js
+    if (allQuestions && allQuestions.length > 0) {
+      currentQuestions = [...allQuestions].sort(() => 0.5 - Math.random()).slice(0, 5);
+    }
+  }
+
+  // Panggil resetGame saat pertama kali load
+  onMount(() => {
+    resetGame();
+  });
+
 function handleAnswer(index) {
     if (index === currentQuestions[currentQIndex].c) {
       score++;
@@ -160,7 +182,7 @@ function calculateResult() {
                 class="w-full py-4 my-4 bg-[#713822] text-white pgm text-2xl rounded-xl hover:bg-[#380d07] transition-all">
           {ui.btnMenu[$language]}
         </button>
-        <button on:click={() => goto('/cook')} 
+        <button on:click={resetGame} 
                 class="w-full py-4 bg-[#713822] text-white pgm text-2xl rounded-xl hover:bg-[#380d07] transition-all">
           {ui.btnCook[$language]}
         </button>
