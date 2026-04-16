@@ -12,4 +12,5 @@ For now what you can and need to do is answer the quiz by clicking the 'cook' bu
 ### assets
 The menu recipes was obtained from Google and photos of menu were taken from Pinterest
 ### uses of AI
-AI helps brainstorming component and explaining/translating svelte original docs
+AI helps brainstorming component and explaining/translating svelte original docs, also translating indonesian quiz to english language
+
